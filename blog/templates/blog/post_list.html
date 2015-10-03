@@ -6,8 +6,15 @@
 	    <div>
 	    	<h1><a href="">Outofmap's blog</a></h1>
 	    </div>
-
-	    <div>
+	    {% for post in posts %}
+	    	<div>
+	    		<p>published : {{post.published_date}}</p>
+	    		<h1><a href="">{{post.title}}</a></h1>
+	    		<p>{{post.text|linebreaks}}</p>
+	    	</div>
+	   		
+	   	{% endfor %}
+	   <!--  <div>
 	    	<p>published: 2015.10.03, 14:51</p>
 	    	<h2><a href="">My first post</a></h2>
 	    	<p>개천절 아침 10시부터 장고걸스 시작!</p>
@@ -17,7 +24,7 @@
 	    	<p>published: 2015.10.03 14:53</p>
 	    	<h2><a href="">My second post</a></h2>
 	    	<p>점심먹고나서도 계속계속 하는 중!</p>
-	    </div>
+	    </div> -->
 
     </body>
 </html>
